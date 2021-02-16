@@ -28,6 +28,12 @@ def sub():
     math="subtract"
     f_num=int(first_num)
     e.delete(0,END)
+    
+def multiply():
+    return
+
+def divide():
+    return
 
 def equal():
     second_num=e.get()
@@ -49,11 +55,14 @@ button7=Button(root,text="7",padx=40,pady=20,command=lambda: buttonclick(7))
 button8=Button(root,text="8",padx=40,pady=20,command=lambda: buttonclick(8))
 button9=Button(root,text="9",padx=40,pady=20,command=lambda: buttonclick(9))
 button0=Button(root,text="0",padx=40,pady=20,command=lambda: buttonclick(0))
+
 buttonadd=Button(root,text="+",padx=39,pady=20,command=add)
 buttonsub=Button(root,text="-",padx=40,pady=20,command=sub)
-buttonclear=Button(root,text="Clear", padx=30,pady=53,command= buttonclear)
-buttonequal=Button(root,text="=",padx=40,pady=51,command=equal)
+buttonequal=Button(root,text="=",padx=87,pady=20,command=equal)
+buttondivide=Button(root,text="Clear",padx=60,pady=20,command=buttonclear)
 
+buttonclear=Button(root,text="/", padx=20,pady=51,command= buttonclear)
+buttonequal=Button(root,text="X", padx=20,pady=51,command=equal)
 
 # on screen,
 button1.grid(row=3,column=0)
@@ -71,6 +80,9 @@ button9.grid(row=1,column=2)
 button0.grid(row=4,column=0)
 buttonadd.grid(row=4,column=1)
 buttonsub.grid(row=4,column=2)
+
+buttonmultiply.grid(row=5,column=0,columnspan=2)
+buttondivide.grid(row=5,column=2,columnspan=2)
 buttonequal.grid(row=1,column=3,rowspan=2)
 buttonclear.grid(row=3,column=3,rowspan=2)
 
