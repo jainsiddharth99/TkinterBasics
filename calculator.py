@@ -3,7 +3,6 @@ root = Tk()
 root.title("Calculator")
 e=Entry(root,width='35',borderwidth=5)
 e.grid(row=0,column=0,columnspan=4,padx=10,pady=10)
-# e.insert(0,"")
 
 def buttonclick(number):
     current=e.get()
@@ -30,10 +29,20 @@ def sub():
     e.delete(0,END)
     
 def multiply():
-    return
+    first_num=e.get()
+    global f_num
+    global math
+    math="multi"
+    f_num=int(first_num)
+    e.delete(0,END)
 
 def divide():
-    return
+    first_num=e.get()
+    global f_num
+    global math
+    math="div"
+    f_num=int(first_num)
+    e.delete(0,END)
 
 def equal():
     second_num=e.get()
@@ -42,7 +51,12 @@ def equal():
         e.insert(0,f_num+int(second_num))
     elif math=="subtract":
         e.insert(0,f_num-int(second_num))
-        
+    elif math=="multi":
+        e.insert(0,f_num*int(second_num))
+    elif math=="div":
+        e.insert(0,f_num/int(second_num))
+    else:
+        pass        
         
 # buttons
 button1=Button(root,text="1",padx=40,pady=20,command=lambda: buttonclick(1))
