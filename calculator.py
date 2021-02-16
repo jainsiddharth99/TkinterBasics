@@ -59,10 +59,10 @@ button0=Button(root,text="0",padx=40,pady=20,command=lambda: buttonclick(0))
 buttonadd=Button(root,text="+",padx=39,pady=20,command=add)
 buttonsub=Button(root,text="-",padx=40,pady=20,command=sub)
 buttonequal=Button(root,text="=",padx=87,pady=20,command=equal)
-buttondivide=Button(root,text="Clear",padx=60,pady=20,command=buttonclear)
+buttonclear=Button(root,text="Clear",padx=60,pady=20,command=buttonclear)
 
-buttonclear=Button(root,text="/", padx=20,pady=51,command= buttonclear)
-buttonequal=Button(root,text="X", padx=20,pady=51,command=equal)
+buttondivide=Button(root,text="/", padx=20,pady=51,command= divide)
+buttonmultiply=Button(root,text="X", padx=20,pady=51,command=multiply)
 
 # on screen,
 button1.grid(row=3,column=0)
@@ -81,12 +81,9 @@ button0.grid(row=4,column=0)
 buttonadd.grid(row=4,column=1)
 buttonsub.grid(row=4,column=2)
 
-buttonmultiply.grid(row=5,column=0,columnspan=2)
-buttondivide.grid(row=5,column=2,columnspan=2)
-buttonequal.grid(row=1,column=3,rowspan=2)
-buttonclear.grid(row=3,column=3,rowspan=2)
-
-
-# button1.pack()
+buttonmultiply.grid(row=1,column=3,rowspan=2)
+buttondivide.grid(row=3,column=3,rowspan=2)
+buttonequal.grid(row=5,column=0,columnspan=2)
+buttonclear.grid(row=5,column=2,columnspan=2)
 
 root.mainloop()
